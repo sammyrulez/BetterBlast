@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Bit score:</b>
+  <%= @report_hit.bit_score %>
+</p>
+
+<p>
+  <b>Evalue:</b>
+  <%= @report_hit.evalue %>
+</p>
+
+<p>
+  <b>Identity:</b>
+  <%= @report_hit.identity %>
+</p>
+
+<p>
+  <b>Overlap:</b>
+  <%= @report_hit.overlap %>
+</p>
+
+<p>
+  <b>Len:</b>
+  <%= @report_hit.len %>
+</p>
+
+<p>
+  <b>Target:</b>
+  <%= @report_hit.target %>
+</p>
+
+
+<%= link_to 'Edit', edit_report_hit_path(@report_hit) %> |
+<%= link_to 'Back', report_hits_path %>

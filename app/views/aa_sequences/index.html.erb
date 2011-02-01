@@ -1,0 +1,23 @@
+<h1>Listing aa_sequences</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aa_sequences.each do |aa_sequence| %>
+  <tr>
+    <td><%= aa_sequence.content %></td>
+    <td><%= link_to 'Show', aa_sequence %></td>
+    <td><%= link_to 'Edit', edit_aa_sequence_path(aa_sequence) %></td>
+    <td><%= link_to 'Destroy', aa_sequence, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Aa sequence', new_aa_sequence_path %>

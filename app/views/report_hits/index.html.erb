@@ -1,0 +1,33 @@
+<h1>Listing report_hits</h1>
+
+<table>
+  <tr>
+    <th>Bit score</th>
+    <th>Evalue</th>
+    <th>Identity</th>
+    <th>Overlap</th>
+    <th>Len</th>
+    <th>Target</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @report_hits.each do |report_hit| %>
+  <tr>
+    <td><%= report_hit.bit_score %></td>
+    <td><%= report_hit.evalue %></td>
+    <td><%= report_hit.identity %></td>
+    <td><%= report_hit.overlap %></td>
+    <td><%= report_hit.len %></td>
+    <td><%= report_hit.target %></td>
+    <td><%= link_to 'Show', report_hit %></td>
+    <td><%= link_to 'Edit', edit_report_hit_path(report_hit) %></td>
+    <td><%= link_to 'Destroy', report_hit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Report hit', new_report_hit_path %>

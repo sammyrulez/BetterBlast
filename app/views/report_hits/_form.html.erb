@@ -1,0 +1,41 @@
+<%= form_for(@report_hit) do |f| %>
+  <% if @report_hit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@report_hit.errors.count, "error") %> prohibited this report_hit from being saved:</h2>
+
+      <ul>
+      <% @report_hit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bit_score %><br />
+    <%= f.text_field :bit_score %>
+  </div>
+  <div class="field">
+    <%= f.label :evalue %><br />
+    <%= f.text_field :evalue %>
+  </div>
+  <div class="field">
+    <%= f.label :identity %><br />
+    <%= f.text_field :identity %>
+  </div>
+  <div class="field">
+    <%= f.label :overlap %><br />
+    <%= f.text_field :overlap %>
+  </div>
+  <div class="field">
+    <%= f.label :len %><br />
+    <%= f.text_field :len %>
+  </div>
+  <div class="field">
+    <%= f.label :target %><br />
+    <%= f.text_area :target %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

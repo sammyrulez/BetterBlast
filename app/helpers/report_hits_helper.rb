@@ -1,0 +1,2 @@
+module ReportHitsHelper
+end

@@ -1,0 +1,39 @@
+
+
+<p>
+  <b>Content:</b>
+  <%= @aa_sequence.content %>
+</p>
+
+<div>
+<p>
+  <b>Nucleotidic Acids:</b>
+</p>
+
+<table class="data-table ui-corner-all">
+  <tr>
+    <th>Content</th>
+    <th>Computed</th>
+    <th></th>
+  </tr>
+
+<% @aa_sequence.na_sequence.each do |na_sequence| %>
+  <tr class="<%= cycle("even", "odd") -%>" >
+    <td width="60%" ><%= na_sequence.content %></td>
+    <td width="20%"  style="text-align:center" >
+    <span class="ui-icon <%if na_sequence.computed? %> ui-icon-check <% else %> ui-icon-radio-on <% end %>"></span>
+    </td>
+    <td width="20%" style="text-align:center"><%= link_to 'Show', na_sequence  %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+</div>
+
+ <div class="actions">
+ 	<%= link_to 'Back', :root , :class => "button-reset" %>
+	<%= link_to 'Edit', edit_aa_sequence_path(@aa_sequence) , :class => "button-add" %> 
+	<%= link_to 'Query to remote', edit_aa_sequence_path(@aa_sequence) , :class => "button-refresh" %> 
+	
+</div>

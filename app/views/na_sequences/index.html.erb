@@ -1,0 +1,21 @@
+<h1>Listing na_sequences</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @na_sequences.each do |na_sequence| %>
+  <tr>
+    <td><%= link_to 'Show', na_sequence %></td>
+    <td><%= link_to 'Edit', edit_na_sequence_path(na_sequence) %></td>
+    <td><%= link_to 'Destroy', na_sequence, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Na sequence', new_na_sequence_path %>

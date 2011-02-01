@@ -1,0 +1,22 @@
+<h1>Recent Sequences</h1>
+
+<table class="data-table ui-corner-all" >
+  <tr>
+    <th>Description</th>
+    <th>Codon table</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aa_sequences.each do |aa_sequence| %>
+  <tr class="<%= cycle("even", "odd") -%>" >
+    <td><%= aa_sequence.description %></td>
+    <td><%= aa_sequence.ref_table %></td>
+    <td><%= link_to 'Show', aa_sequence %></td>
+    <td><%= link_to 'Destroy', aa_sequence, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'New Aa sequence', new_aa_sequence_path , :class => "button-add"  %>
