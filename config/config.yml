@@ -1,0 +1,26 @@
+# see /config/initializers/config.rb
+
+common: &defaults
+  app:
+    name: BetterBlast
+    version: 0.1
+  other:
+    missing_image_url: "/images/missing.png"
+
+
+development:
+  <<: *defaults
+  neat_setting: 800
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+
+
+
+    
+    
+    
