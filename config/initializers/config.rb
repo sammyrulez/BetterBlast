@@ -4,7 +4,7 @@ CONFIG = YAML.load(raw_config)["common"].merge(YAML.load(raw_config)[RAILS_ENV])
 
 begin
   unless RAILS_ENV=='test'
-    rev = %x[git describe]
+    rev = "beta"
   else
     rev = "test"
   end
